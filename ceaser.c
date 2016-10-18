@@ -9,9 +9,11 @@ int main(){
 	scanf("%d",&z);
 	while(string[i] != '\0'){
 		if(string[i] >= 'a' && string[i] <= 'z'){
+      //decrypt for alphabets
 			plain_text[i] = (char)(((string[i] - z - 'a' + 26)%26) + 'a');
 		}
 		else{
+      //decrypt for special characters
 			plain_text[i] = (char)(string[i] - z);
 		}
 		i++;	
